@@ -73,18 +73,14 @@ d3.json(url).then(function(data) {
     
 
     //1. Adding the grayscale tile layer
-    var host = 'https://maps.omniscale.net/v2/'+API_KEY+'/style.grayscale/{z}/{x}/{y}.png';
-    var attribution = '&copy; 2021 &middot; <a href="https://maps.omniscale.com/">Omniscale</a> ' +
-        '&middot; Map data: <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
-    var grayscale = L.tileLayer(host, {
-        attribution: attribution
-      });
+    var grayscale = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    });
 
     //2. Adding the outdoors tile layer
-    var host2 = 'https://maps.omniscale.net/v2/'+API_KEY+'/style.default/{z}/{x}/{y}.png';
-    var outdoors = L.tileLayer(host2, {
-        attribution: attribution
-      });
+    var outdoors = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
+    });
 
     //3. Adding the satellite view tile layer
     var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
