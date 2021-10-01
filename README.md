@@ -27,7 +27,7 @@ First step is to visualize an earthquake data set.
    * Created a legend that will provide context for the map data. Example [here](https://leafletjs.com/examples/choropleth/).
 
    * Leaflet tile styles used in this project: 
-      * [Grayscale](https://maps.omniscale.com/en/examples/leaflet_grayscale) 
+      * [Grayscale](https://leaflet-extras.github.io/leaflet-providers/preview/) 
       * [Outdoor](https://maps.omniscale.com/en/examples/leaflet) 
       * [Satellite](http://bl.ocks.org/nitaku/047a77e256de17f25e72)
 
