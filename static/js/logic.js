@@ -77,6 +77,7 @@ d3.json(url).then(function(data) {
       attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
     });
     
+    // Another Grayscale I used (requires API, not best when doing GitHub pages)->https://maps.omniscale.com/en/examples/leaflet_grayscale
     // var grayscale = L.tileLayer('https://maps.omniscale.net/v2/'+API_KEY+'/style.grayscale/{z}/{x}/{y}.png', {
     // attribution: '&copy; 2021 &middot; <a href="https://maps.omniscale.com/">Omniscale</a> ' + '&middot; Map data: <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     // });
