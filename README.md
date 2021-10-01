@@ -5,7 +5,7 @@ Welcome to the United States Geological Survey, or USGS for short. The USGS is r
 The USGS is interested in building a new set of tools that will allow them to visualize their earthquake data. They collect a massive amount of data from all over the world each day, but they lack a meaningful way of displaying it. Their hope is that being able to visualize their data will allow them to better educate the public and other government organizations (and hopefully secure more funding) on issues facing our planet.
 
 
---------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
 
 ### Level 1: Basic Visualization
 
@@ -18,20 +18,25 @@ First step is to visualize an earthquake data set.
 
 2. **Import & Visualize the Data**
 
-   Create a map using Leaflet that plots all of the earthquakes from your data set based on their longitude and latitude.
+   Created a map using Leaflet that plots all of the earthquakes from your data set based on their longitude and latitude.
 
-   * Data markers should reflect the magnitude of the earthquake by their size and and depth of the earthquake by color. Earthquakes with higher magnitudes should appear larger and earthquakes with greater depth should appear darker in color.
+   * Data markers reflect the magnitude of the earthquake by their size and and depth of the earthquake by color. Earthquakes with higher magnitudes should appear larger and earthquakes with greater depth should appear darker in color.
 
-   * **HINT:** The depth of the earth can be found as the third coordinate for each earthquake.
+   * Included popups that provide additional information about the earthquake when a marker is clicked.
 
-   * Include popups that provide additional information about the earthquake when a marker is clicked.
+   * Created a legend that will provide context for the map data. Example [here](https://leafletjs.com/examples/choropleth/).
 
-   * Create a legend that will provide context for the map data.
+   * Leaflet tile styles used in this project: 
+      * [Grayscale](https://maps.omniscale.com/en/examples/leaflet_grayscale) 
+      * [Outdoor](https://maps.omniscale.com/en/examples/leaflet) 
+      * [Satellite](http://bl.ocks.org/nitaku/047a77e256de17f25e72)
 
-   * Visualization should look something like the map above.
+   * The visualization looks like this:
+   
+   ![BasicMap](Images/BasicMap.png)
 
 
---------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
 
 ### Level 2: More Data 
 
@@ -39,8 +44,12 @@ The USGS wants you to plot a second data set on your map to illustrate the relat
 
 In this step:
 
-* Plot a second data set on our map.
+* Plotted a second data set on the map.
 
-* Add a number of base maps to choose from as well as separate out our two different data sets into overlays that can be turned on and off independently.
+* Added a number of base maps to choose from as well as separate out our two different data sets into overlays that can be turned on and off independently.
 
-* Add layer controls to our map.
+* Added layer controls to the map.
+
+* The visualization looks like this:
+
+![Advanced](Images/Advanced.png)
