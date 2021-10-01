@@ -33,7 +33,7 @@ First step is to visualize an earthquake data set.
 
    * The visualization looks like this:
    
-   ![BasicMap](Images/BasicMap.png)
+   ![BasicMap](Images/BasicMap.PNG)
 
 
 --------------------------------------------------------------------------------------------------------------------
@@ -52,4 +52,4 @@ In this step:
 
 * The visualization looks like this:
 
-![Advanced](Images/Advanced.png)
+![Advanced](Images/Advanced.PNG)
