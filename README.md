@@ -28,7 +28,7 @@ First step is to visualize an earthquake data set.
 
    * Leaflet tile styles used in this project: 
       * [Grayscale](https://maps.omniscale.com/en/examples/leaflet_grayscale) 
-      * [Outdoor](https://maps.omniscale.com/en/examples/leaflet) 
+      * [Outdoor](https://leaflet-extras.github.io/leaflet-providers/preview/) 
       * [Satellite](http://bl.ocks.org/nitaku/047a77e256de17f25e72)
 
    * The visualization looks like this:
