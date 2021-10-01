@@ -73,8 +73,10 @@ d3.json(url).then(function(data) {
     
 
     //1. Adding the grayscale tile layer
-    var grayscale= L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    var osmLink = "<a href='http://www.openstreetmap.org'>OpenStreetMap</a>";           
+    var grayscale = L.tileLayer(
+      'http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png', {
+      attribution: '&copy; ' + osmLink
     });
     // var grayscale = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
     //   attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
