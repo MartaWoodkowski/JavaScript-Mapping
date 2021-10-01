@@ -73,9 +73,14 @@ d3.json(url).then(function(data) {
     
 
     //1. Adding the grayscale tile layer
-    var grayscale = L.tileLayer('https://maps.omniscale.net/v2/api007-ac69ef6f/style.grayscale/{z}/{x}/{y}.png', {
-    attribution: '&copy; 2021 &middot; <a href="https://maps.omniscale.com/">Omniscale</a> ' + '&middot; Map data: <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    var grayscale = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+	  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	  subdomains: 'abcd'
     });
+    
+    // var grayscale = L.tileLayer('https://maps.omniscale.net/v2/api007-ac69ef6f/style.grayscale/{z}/{x}/{y}.png', {
+    // attribution: '&copy; 2021 &middot; <a href="https://maps.omniscale.com/">Omniscale</a> ' + '&middot; Map data: <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    // });
 
     //2. Adding the outdoors tile layer
     var outdoors = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}', {
