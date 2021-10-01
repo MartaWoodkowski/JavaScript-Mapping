@@ -73,16 +73,20 @@ d3.json(url).then(function(data) {
     
 
     //1. Adding the grayscale tile layer
-    var grayscale = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    var grayscale = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+      maxZoom: 16
     });
+    // var grayscale = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+    //   attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    // });
 
     // var host = 'https://maps.omniscale.net/v2/'+API_KEY+'/style.grayscale/{z}/{x}/{y}.png';
     // var attribution = '&copy; 2021 &middot; <a href="https://maps.omniscale.com/">Omniscale</a> ' +
     //     '&middot; Map data: <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
-    var grayscale = L.tileLayer(host, {
-        attribution: attribution
-      });
+    // var grayscale = L.tileLayer(host, {
+    //     attribution: attribution
+    //   });
 
     //2. Adding the outdoors tile layer
     var outdoors = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}', {
