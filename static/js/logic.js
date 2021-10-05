@@ -73,8 +73,12 @@ d3.json(url).then(function(data) {
     
 
     //1. Adding the grayscale tile layer
-    var grayscale = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-      attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
+    // var grayscale = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+    //   attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
+    // });
+    var grayscale = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+	  maxZoom: 20,
+	  attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     });
     
     // Tried another 'grayscale' (requires API, not best when doing GitHub pages)->https://maps.omniscale.com/en/examples/leaflet_grayscale
@@ -109,7 +113,7 @@ d3.json(url).then(function(data) {
 
     // Define a map object
     var myMap = L.map('map', {
-    center: [39.063372634251245, -101.4628654424558],
+    center: [35, -99], //[39.063372634251245, -101.4628654424558],
     zoom: 5,
     layers: [grayscale, earthquakes]
     });
