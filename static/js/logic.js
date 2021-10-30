@@ -113,7 +113,7 @@ d3.json(url).then(function(data) {
     var myMap = L.map('map', {
     center: [35, -99], //[39.063372634251245, -101.4628654424558],
     zoom: 5,
-    layers: [grayscale, earthquakes]
+    layers: [outdoors, earthquakes]
     });
 
     // Pass our map layers to our layer control
