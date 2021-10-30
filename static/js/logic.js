@@ -72,7 +72,12 @@ d3.json(url).then(function(data) {
 
     
 
-    //1. Adding the grayscale tile layer
+    //1. Adding the outdoors tile layer
+    var outdoors = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+
+    //2. Adding the grayscale tile layer
     var grayscale = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
       subdomains: 'abcd',
@@ -84,12 +89,6 @@ d3.json(url).then(function(data) {
     // attribution: '&copy; 2021 &middot; <a href="https://maps.omniscale.com/">Omniscale</a> ' + '&middot; Map data: <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     // });
 
-    //2. Adding the outdoors tile layer
-    var outdoors = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    });
-
-
     //3. Adding the satellite view tile layer
     var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
         attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
@@ -99,8 +98,8 @@ d3.json(url).then(function(data) {
 
     // Create a baseMaps object
     var baseMaps = {
-      'Grayscale': grayscale,
       'Outdoor': outdoors,
+      'Grayscale': grayscale,
       'Satellite': satellite
       };
 
